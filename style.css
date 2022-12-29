@@ -1,16 +1,20 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
-  font-family: "Raleway", sans-serif;
 }
 
 html {
+  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased; /* doesn't seem to work in the * selector ?? */
+
   --color-gray-100: hsl(270deg 25% 96%);
   --color-gray-300: hsl(270deg 17% 84%);
   --color-gray-500: hsl(270deg 17% 72%);
   --color-gray-700: hsl(270deg 12% 58%);
   --color-gray-900: hsl(270deg 22% 12%);
   --color-gray-1000: hsl(270deg 20% 8%);
+  /* etc ... for other weights */
+  --weight-black: 900;
 }
 
 html,
@@ -47,17 +51,18 @@ footer {
 .logo {
   font-size: 2rem;
   margin-bottom: 16px;
-  font-weight: 900;
+  font-weight: var(--weight-black);
 }
 
 .subLogo {
   font-weight: 500;
   font-style: italic;
-  color: var(--color-gray-300);
+  color: var(--color-gray-500);
 }
 
 .subLogo .person-name {
   font-weight: 700;
+  color: var(--color-gray-300);
 }
 
 .legal {
